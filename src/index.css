@@ -5,3 +5,15 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
   }
+  .swiper-container {
+    height: 140px;
+}
+.active{
+  color:rgb(0, 26, 255);
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+
+
+

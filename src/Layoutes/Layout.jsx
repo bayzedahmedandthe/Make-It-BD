@@ -7,7 +7,9 @@ const Layout = () => {
     return (
         <div className="poppins">
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className="bg-gray-50">
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

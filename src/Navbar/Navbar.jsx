@@ -1,5 +1,6 @@
 import { GoBook } from "react-icons/go";
 import mainLogo from "../assets/Logo-removebg-preview.png"
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -24,18 +25,20 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex items-center gap-6 px-1 pt-8 ">
-                        <li className="hover:text-blue-500 cursor-pointer"><a>Home</a></li>
-                        <li className="hover:text-blue-500 cursor-pointer"><a>About Us</a></li>
-                        <li className="hover:text-blue-500 cursor-pointer"><a>Success Story</a></li>
-                        <li className="hover:text-blue-500 cursor-pointer"><a>Freelancing</a></li>
-                        <li className="hover:text-blue-500 cursor-pointer"><a>Contact</a></li>
+                        <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/">Home</NavLink></li>
+                        <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/aboutus">About Us</NavLink></li>
+                        <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/sucess">Success Story</NavLink></li>
+                        <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/freelancing">Freelancing</NavLink></li>
+                        <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="pt-2 hover:text-blue-500 cursor-pointer">
-                        <p className="flex justify-center items-center"><GoBook></GoBook></p>
-                        <h3>Browse Course</h3>
-                    </div>
+                    <NavLink to="/browse">
+                        <div className="pt-2 hover:text-blue-500 cursor-pointer">
+                            <p className="flex justify-center items-center"><GoBook></GoBook></p>
+                            <h3>Browse Course</h3>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </div>
