@@ -33,12 +33,16 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to="/browse">
-                        <div className="pt-2 hover:text-blue-500 cursor-pointer">
-                            <p className="flex justify-center items-center"><GoBook></GoBook></p>
-                            <h3>Browse Course</h3>
-                        </div>
-                    </NavLink>
+                    <div className="flex items-center justify-center gap-4">
+                        <NavLink to="/browse">
+                            <div className="pt-2 hover:text-blue-500 cursor-pointer">
+                                <p className="flex justify-center items-center"><GoBook></GoBook></p>
+                                <h3>Browse Course</h3>
+                            </div>
+                        </NavLink>
+                       <NavLink to="/login"><p className="pt-6">Login</p></NavLink>
+                    </div>
+
                 </div>
             </div>
         </div>

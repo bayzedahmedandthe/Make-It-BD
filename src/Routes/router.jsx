@@ -8,6 +8,7 @@ import Sucess from "../Pages/Sucess/Sucess";
 import Freelancing from "../Pages/Freelancing/Freelancing";
 import Contact from "../Pages/Contact/Contact";
 import BrowseCourses from "../Pages/BrowseCourses/BrowseCourses";
+import Login from "../Pages/Authentication/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
         {path: "/sucess", element: <Sucess></Sucess>},
         {path: "/freelancing", element: <Freelancing></Freelancing>},
         {path: "/contact", element: <Contact></Contact>},
-        {path: "/browse", element: <BrowseCourses></BrowseCourses>}
+        {path: "/browse", element: <BrowseCourses></BrowseCourses>},
+        {path: "/login", element: <Login></Login>}
       ]
     },
   ]);
