@@ -14,11 +14,11 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-gradient-to-r from-[#ede7f7] to bg-[#fae8e8] shadow-2xl z-1 mt-3 w-52 p-2 ">
-                            <li><a>Home</a></li>
-                            <li><a>About Us</a></li>
-                            <li><a>Success Story</a></li>
-                            <li><a>Freelancing</a></li>
-                            <li><a>Contact</a></li>
+                            <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/">Home</NavLink></li>
+                            <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/aboutus">About Us</NavLink></li>
+                            <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/sucess">Success Story</NavLink></li>
+                            <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/freelancing">Freelancing</NavLink></li>
+                            <li className="hover:text-blue-500 cursor-pointer"><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
                     </div>
                     <a className=" "><img className="md:w-[170px] md:h-[65px] h-[40px] w-[90px] md:mb-2 mb-0" src={mainLogo} alt="mainLogo" /></a>
@@ -40,7 +40,7 @@ const Navbar = () => {
                                 <h3>Browse Course</h3>
                             </div>
                         </NavLink>
-                       <NavLink to="/login"><p className="pt-6">Login</p></NavLink>
+                        <NavLink to="/login"><p className="pt-6 hover:text-blue-500 cursor-pointer">Login</p></NavLink>
                     </div>
 
                 </div>
