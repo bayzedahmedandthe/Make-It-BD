@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import mainLogo from "../Login/Logo-removebg-preview.png"
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -8,9 +9,9 @@ const Login = () => {
     };
 
     return (
-        <div className="bg-[url(https://i.ibb.co.com/n8f5g0T1/5559852.jpg)] py-12 min-h-screen">
-            <div className="flex items-center md:w-11/12 mx-auto w-full shadow-cyan-900 shadow-2xl min-h-screen">
-                <div className="hidden md:block text-center px-20">
+        <div className="bg-[url(https://i.ibb.co.com/n8f5g0T1/5559852.jpg)] py-12 ">
+            <div className="md:flex items-center w-11/12 mx-auto  gap-12 shadow-cyan-900 shadow-2xl md:my-8 md:py-8 my-4 py-4">
+                <div className="hidden md:block text-center w-6/12 mx-16 ">
                     <div className="flex justify-center items-center">
                         <img className="md:w-[170px] md:h-[65px] h-[40px] w-[90px] md:mb-2 mb-0" src={mainLogo} alt="mainLogo" />
                     </div>
@@ -18,18 +19,23 @@ const Login = () => {
                     <h1 className="text-6xl font-semibold">Welcome!</h1>
                     <p className="py-4">This login page is designed to securely authenticate users before giving them access to the system. It features a modern, clean, and responsive design. Users can log in using their email and password, and error messages are displayed for invalid inputs.</p>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-20">
+                <div className="md:hidden block">
+                    <div className="flex justify-center items-center">
+                        <img className=" h-[80px] w-[120px] md:mb-2 mb-0" src={mainLogo} alt="mainLogo" />
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit(onSubmit)} className="md:w-[30%] w-[90%] mx-auto">
                     <div className="card-body">
                         <fieldset className="fieldset">
                             <label className="fieldset-label font-bold text-lg">Email</label>
-                            <input {...register("email")} type="email" className="input" placeholder="Email" />
+                            <input {...register("email")} type="email" className="input input-primary w-full" placeholder="Email" />
                             <label className="fieldset-label font-bold text-lg">Password</label>
-                            <input {...register("password")} type="password" className="input " placeholder="Password" />
-                            <button className="btn btn-primary mt-4 ">Login</button>
+                            <input {...register("password")} type="password" className="input input-primary w-full" placeholder="Password" />
+                            <button className="btn btn-primary mt-6 ">Login</button>
                         </fieldset>
+                        <p className="pt-2 md:text-lg ">New to this website! <Link to="/register"><span className="hover:underline  text-white pl-2"> Register Now</span></Link></p>
                     </div>
-                </form>
-
+                </form> 
             </div>
         </div>
     );
