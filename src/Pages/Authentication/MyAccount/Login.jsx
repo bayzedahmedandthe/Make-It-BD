@@ -5,13 +5,38 @@ import { FcGoogle } from "react-icons/fc";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
 import Register from "./Register";
+import useAuth from "../../../Hooks/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
+    const { signInWithGoogle, loginUser} = useAuth();
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         const password = data.password;
         const email = data.email;
+        loginUser(email, password)
+        .then(() => {
+            toast.success("Sign in successful")
+        })
+        .catch(error => {
+            toast.error(error)
+        })
     };
+
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+        .then(() => {
+            toast.success("Sign in successful")
+        })
+        .catch(error => {
+            toast.error(error)
+        })
+    }
+
+
+
+
     const [loginPassword, setLoginPassword] = useState(true);
     const handleLoginInputType = () => {
         setLoginPassword(!loginPassword);
@@ -43,17 +68,13 @@ const Login = () => {
                                         Remember me
                                     </label>
                                     <div className="flex items-center justify-between mt-4">
-                                        <button className=" bg-[#360f7e] py-2 px-4 rounded-sm text-white text-lg">Login</button>
+                                        <button className=" bg-[#360f7e] py-2 px-4 rounded-sm text-white text-lg">Sign in</button>
                                         <div className="flex items-center gap-2">
-                                            <p className="text-lg">Or login with</p>
-                                            <span className="md:text-4xl text-2xl cursor-pointer"><FcGoogle /></span>
+                                            <p className="text-lg">Or Sign in with</p>
+                                            <span onClick={handleGoogleLogin} className="md:text-4xl text-2xl cursor-pointer"><FcGoogle /></span>
                                         </div>
                                     </div>
                                 </fieldset>
-
-                                <button type="button" className="flex items-center justify-end mt-4">
-
-                                </button>
                             </div>
                         </form>
                     </div>
