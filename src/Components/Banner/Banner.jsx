@@ -16,8 +16,8 @@ const Banner = () => {
                     <p className="py-4">With a vision to turn manpower into assets, Mak It BD Institute is ready to enhance your learning experience with skilled mentors and an updated curriculum. Pick your desired course from more than 45 trendy options.
                     </p>
                     <div className="grid md:grid-cols-2 grid-cols-1   gap-4 md:w-4/6 w-1/2 md:mx-0 mx-auto">
-                        <button className="flex items-center gap-2 hover:bg-[#4410a3] btn bg-gradient-to-r py-2 px-3 text-white from-[#4410a3] to bg-[#d3390a]"><span><GoBook></GoBook></span>Browse Course</button>
-                        <button className="flex items-center gap-2 btn hover:bg-[#4410a3] bg-gradient-to-l py-2 px-3 text-white from-[#4410a3] to bg-[#d3390a]"><span><GoBook></GoBook></span>Join free seminar</button>
+                        <button className="flex items-center gap-2 hover:bg-[#360f7e] btn bg-gradient-to-r py-2 px-3 text-white from-[#360f7e] to bg-[#d3390a]"><span><GoBook></GoBook></span>Browse Course</button>
+                        <button className="flex items-center gap-2 btn hover:bg-[#360f7e] bg-gradient-to-l py-2 px-3 text-white from-[#360f7e] to bg-[#d3390a]"><span><GoBook></GoBook></span>Join free seminar</button>
                     </div>
                 </div>
                 {/* Video Container */}

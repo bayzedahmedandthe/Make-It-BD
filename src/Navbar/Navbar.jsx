@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className="navbar md:w-11/12 mx-auto w-full ">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost mt-6 lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost mt-6 lg:hidden pl-0">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -33,14 +33,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="flex items-center justify-center gap-4">
+                    <div className="flex items-center justify-center gap-4 md:pt-2 pt-0">
                         <NavLink to="/browse">
-                            <div className="pt-2 hover:text-blue-500 cursor-pointer">
-                                <p className="flex justify-center items-center"><GoBook></GoBook></p>
-                                <h3>Browse Course</h3>
-                            </div>
+                                <h3 className="pt-6">Courses</h3>
                         </NavLink>
-                        <NavLink to="/login"><p className="pt-6 hover:text-blue-500 cursor-pointer">Login</p></NavLink>
+                        <NavLink to="/login"><p className="pt-6 hover:text-blue-500 cursor-pointer">My account</p></NavLink>
                     </div>
 
                 </div>
@@ -50,3 +47,45 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+// import React from 'react';
+// import { FiUser, FiUserPlus } from 'react-icons/fi';
+// import { IoCallOutline } from 'react-icons/io5';
+// import { LiaFlagUsaSolid } from 'react-icons/lia';
+// import { TfiLocationPin } from 'react-icons/tfi';
+
+// const Navbar = () => {
+//     return (
+//         <div>
+//             {/* navTop container */}
+//             <div className='flex items-center justify-between py-1 border-b border-b-gray-300'>
+//                 {/* navTop left section */}
+//                 <div className='flex items-center justify-center mx-6'>
+//                     <TfiLocationPin />
+//                     <p className='pr-4 pl-1'>Dhaka, Bangladesh</p>
+//                     <IoCallOutline />
+//                     +88 01929564378
+//                 </div>
+//                 {/* navTop right section */}
+//                 <div className='flex items-center justify-center gap-4 mx-6'>
+//                 <p className='flex items-center justify-center gap-1'><LiaFlagUsaSolid /> English</p>
+//                 <p className='flex items-center justify-center gap-1'><FiUser/> Register</p>
+//                 <p className='flex items-center justify-center gap-1'><FiUserPlus/> Sign in</p>
+//                 </div>
+//             </div>
+//             {/* navMiddle container */}
+//             <div className='flex items-center justify-between'>
+//                 {/* navLogo */}
+//                 <img src="" alt="" />
+//                 {/* navSearch container*/}
+//                 <div></div>
+//                 {/* navright container */}
+//                 <div></div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Navbar;
