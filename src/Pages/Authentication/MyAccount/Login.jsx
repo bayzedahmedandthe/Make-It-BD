@@ -68,7 +68,7 @@ const Login = () => {
                                         Remember me
                                     </label>
                                     <div className="flex items-center justify-between mt-4">
-                                        <button className=" bg-[#360f7e] py-2 px-4 rounded-sm text-white text-lg">Sign in</button>
+                                        <button className=" bg-[#360f7e] py-2 px-4 rounded-sm text-white cursor-pointer text-lg">Sign in</button>
                                         <div className="flex items-center gap-2">
                                             <p className="text-lg">Or Sign in with</p>
                                             <span onClick={handleGoogleLogin} className="md:text-4xl text-2xl cursor-pointer"><FcGoogle /></span>

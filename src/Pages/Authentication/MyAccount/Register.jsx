@@ -38,7 +38,7 @@ const Register = () => {
 
             })
             .catch(error => {
-                console.log(error);
+                toast.error("auth/email-already-in-use")
             })
 
     };
@@ -65,7 +65,7 @@ const Register = () => {
 
                     </fieldset>
                     <div className="flex items-center justify-start">
-                        <button className="mt-4 bg-[#360f7e] py-2 px-4 rounded-sm text-white text-lg">Register</button>
+                        <button className="mt-4 bg-[#360f7e] py-2 px-4 rounded-sm text-white text-lg cursor-pointer">Register</button>
                     </div>
                 </div>
             </form>
