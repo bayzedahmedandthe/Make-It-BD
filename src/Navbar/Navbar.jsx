@@ -37,7 +37,7 @@ const Navbar = () => {
                         <NavLink to="/browse">
                                 <h3 className="pt-6">Courses</h3>
                         </NavLink>
-                        <NavLink to="/login"><p className="pt-6 hover:text-blue-500 cursor-pointer">My account</p></NavLink>
+                        <NavLink to="/myaccount"><p className="pt-6 hover:text-blue-500 cursor-pointer">My account</p></NavLink>
                     </div>
 
                 </div>
